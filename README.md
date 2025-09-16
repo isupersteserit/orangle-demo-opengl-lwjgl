@@ -1,1 +1,1 @@
-<img width="3322" height="696" alt="Orangle" src="https://github.com/user-attachments/assets/87bbfb75-f1a5-454d-87b6-1ea49c83b8ca" />
+<img width="3323" height="701" alt="OrangleLogoNew" src="https://github.com/user-attachments/assets/121cb4d2-c7bc-41b8-99a1-c43e6675f2eb" />
