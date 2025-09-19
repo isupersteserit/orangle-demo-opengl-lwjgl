@@ -35,7 +35,7 @@ public class TriangleDemo {
         glfwWindowHint(GLFW_VISIBLE, GLFW_FALSE);
         glfwWindowHint(GLFW_RESIZABLE, GLFW_TRUE);
 
-        window = glfwCreateWindow(800, 600, "Orangle Demo", NULL, NULL);
+        window = glfwCreateWindow(1080, 812, "Orangle Demo", NULL, NULL);
 
         if (window == NULL) {
             throw new RuntimeException("The window of being that is GLFW failed at being created.");
@@ -136,7 +136,7 @@ public class TriangleDemo {
 
         glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
 
-        // Finnally the main render loop
+        // Finally the main render loop
 
         while (!glfwWindowShouldClose(window)) {
             // Cleared Framebuffer

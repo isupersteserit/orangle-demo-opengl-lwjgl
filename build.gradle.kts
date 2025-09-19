@@ -20,6 +20,22 @@ dependencies {
     implementation("org.lwjgl:lwjgl-glfw")
     implementation("org.lwjgl:lwjgl-opengl")
 
+
+    // For loading textures
+    implementation("org.lwjgl:lwjgl-stb")
+    runtimeOnly("org.lwjgl:lwjgl-stb::$lwjglNatives")
+
+    // For model importing (if you want .obj/.fbx/.gltf support)
+    implementation("org.lwjgl:lwjgl-assimp")
+    runtimeOnly("org.lwjgl:lwjgl-assimp::$lwjglNatives")
+
+    // Add JOML
+    implementation("org.joml:joml:1.10.5")
+
+    // For sound (OpenAL bindings)
+    implementation("org.lwjgl:lwjgl-openal")
+    runtimeOnly("org.lwjgl:lwjgl-openal::$lwjglNatives")
+
     // Runtime-only dependencies for the native libraries
     runtimeOnly("org.lwjgl:lwjgl::$lwjglNatives")
     runtimeOnly("org.lwjgl:lwjgl-glfw::$lwjglNatives")
