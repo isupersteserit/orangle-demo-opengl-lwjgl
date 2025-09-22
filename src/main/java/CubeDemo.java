@@ -1,16 +1,20 @@
+
+// Java OMP (Open Math Library Imports)
 import org.joml.Matrix4f;
 import org.joml.Vector3f;
-import org.lwjgl.glfw.GLFWVidMode;
-import org.lwjgl.opengl.GL;
-import org.lwjgl.system.MemoryStack;
+
+// Java I/O
 import java.nio.FloatBuffer;
+
 import static org.lwjgl.glfw.GLFW.*;
 import static org.lwjgl.opengl.GL11.*;
 import static org.lwjgl.opengl.GL15.*;
 import static org.lwjgl.opengl.GL20.*;
 import static org.lwjgl.opengl.GL30.*;
 import static org.lwjgl.system.MemoryUtil.NULL;
-
+import org.lwjgl.glfw.GLFWVidMode;
+import org.lwjgl.opengl.GL;
+import org.lwjgl.system.MemoryStack;
 
 
 
@@ -66,7 +70,6 @@ public class CubeDemo {
 
 
         glfwDefaultWindowHints();
-
         glfwWindowHint(GLFW_VISIBLE, GLFW_FALSE);
         glfwWindowHint(GLFW_RESIZABLE, GLFW_TRUE);
 
@@ -242,13 +245,15 @@ public class CubeDemo {
                 -0.5f, -0.5f, -0.5f,  0.0f,  0.0f, -1.0f,
                 0.5f, -0.5f, -0.5f,  0.0f,  0.0f, -1.0f,
                 0.5f,  0.5f, -0.5f,  0.0f,  0.0f, -1.0f,
+
                 0.5f,  0.5f, -0.5f,  0.0f,  0.0f, -1.0f,
-                -0.5f,  0.5f, -0.5f,  0.0f,  0.0f, -1.0f,
+               -0.5f,  0.5f, -0.5f,  0.0f,  0.0f, -1.0f,
                 -0.5f, -0.5f, -0.5f,  0.0f,  0.0f, -1.0f,
 
                 -0.5f, -0.5f,  0.5f,  0.0f,  0.0f,  1.0f,
                 0.5f, -0.5f,  0.5f,  0.0f,  0.0f,  1.0f,
                 0.5f,  0.5f,  0.5f,  0.0f,  0.0f,  1.0f,
+
                 0.5f,  0.5f,  0.5f,  0.0f,  0.0f,  1.0f,
                 -0.5f,  0.5f,  0.5f,  0.0f,  0.0f,  1.0f,
                 -0.5f, -0.5f,  0.5f,  0.0f,  0.0f,  1.0f,
@@ -256,6 +261,7 @@ public class CubeDemo {
                 -0.5f,  0.5f,  0.5f, -1.0f,  0.0f,  0.0f,
                 -0.5f,  0.5f, -0.5f, -1.0f,  0.0f,  0.0f,
                 -0.5f, -0.5f, -0.5f, -1.0f,  0.0f,  0.0f,
+
                 -0.5f, -0.5f, -0.5f, -1.0f,  0.0f,  0.0f,
                 -0.5f, -0.5f,  0.5f, -1.0f,  0.0f,  0.0f,
                 -0.5f,  0.5f,  0.5f, -1.0f,  0.0f,  0.0f,
@@ -263,6 +269,7 @@ public class CubeDemo {
                 0.5f,  0.5f,  0.5f,  1.0f,  0.0f,  0.0f,
                 0.5f,  0.5f, -0.5f,  1.0f,  0.0f,  0.0f,
                 0.5f, -0.5f, -0.5f,  1.0f,  0.0f,  0.0f,
+
                 0.5f, -0.5f, -0.5f,  1.0f,  0.0f,  0.0f,
                 0.5f, -0.5f,  0.5f,  1.0f,  0.0f,  0.0f,
                 0.5f,  0.5f,  0.5f,  1.0f,  0.0f,  0.0f,
@@ -408,13 +415,9 @@ public class CubeDemo {
 
     private void cleanup() {
         glDeleteProgram(shaderProgram);
-
         glDeleteVertexArrays(vao);
-
         glDeleteBuffers(vbo);
-
         glfwDestroyWindow(window);
-
         glfwTerminate();
     }
 }
