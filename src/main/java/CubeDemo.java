@@ -72,7 +72,7 @@ public class CubeDemo {
             }
 
             float xoffset = (float) (xpos - lastX);
-            float yoffset = (float) (lastY - ypos); // reversed: y-coordinates go from bottom to top
+            float yoffset = (float) (lastY - ypos); // y coords go from down to up
             lastX = xpos;
             lastY = ypos;
 
@@ -93,10 +93,10 @@ public class CubeDemo {
             cameraFront.set(front.normalize());
         });
 
-        // Capture mouse
+        // what is even this
         glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
 
-        // Resize callback
+        // resize keystorke
         glfwSetFramebufferSizeCallback(window, (win, w, h) -> {
             glViewport(0, 0, w, h);
             projection = new Matrix4f().perspective(
@@ -118,7 +118,7 @@ public class CubeDemo {
 
         glEnable(GL_DEPTH_TEST);
 
-        // --- Shaders ---
+        // shaders
         String vertexShaderSource = "#version 330 core\n" +
                 "layout(location = 0) in vec3 aPos;\n" +
                 "layout(location = 1) in vec3 aNormal;\n" +
@@ -171,9 +171,9 @@ public class CubeDemo {
         glDeleteShader(vertexShader);
         glDeleteShader(fragmentShader);
 
-        // --- Cube vertices with normals ---
+        // cube w/ norms
         float[] cubeVertices = {
-                // positions         // normals
+                // pos         // norms
                 -0.5f, -0.5f, -0.5f,  0.0f,  0.0f, -1.0f,
                 0.5f, -0.5f, -0.5f,  0.0f,  0.0f, -1.0f,
                 0.5f,  0.5f, -0.5f,  0.0f,  0.0f, -1.0f,
@@ -251,7 +251,7 @@ public class CubeDemo {
             glUseProgram(shaderProgram);
             glBindVertexArray(vao);
 
-            // --- Keyboard movement ---
+            // check keyboards
             if (glfwGetKey(window, GLFW_KEY_W) == GLFW_PRESS)
                 cameraPos.add(new Vector3f(cameraFront).mul(cameraSpeed));
             if (glfwGetKey(window, GLFW_KEY_S) == GLFW_PRESS)
@@ -267,10 +267,10 @@ public class CubeDemo {
                 cameraPos.add(cross);
             }
 
-            // --- Rebuild view matrix from yaw/pitch ---
+            // rebuild view
             view.identity().lookAt(cameraPos, new Vector3f(cameraPos).add(cameraFront), cameraUp);
 
-            // --- Animate cube ---
+            // cube animation
             angle += 0.01f;
             model.identity().rotateY(angle).rotateX(angle * 0.5f);
 
