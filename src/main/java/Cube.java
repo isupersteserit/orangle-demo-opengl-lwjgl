@@ -15,7 +15,11 @@ public class Cube {
 
     private float[] cubeVertices = {
 
-            // Position        Normals
+
+            // Each triangle is defined / each triangle's normals by three vertexes each.
+
+
+            // Position         Normals
 
             -0.5f, -0.5f, -0.5f,  0.0f,  0.0f, -1.0f,
 

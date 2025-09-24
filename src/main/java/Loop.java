@@ -1,6 +1,6 @@
 // Loop.java
 //
-// Manages the render loop, calling animation and checking input.
+// Manages the render loop calling animation & checking input.
 // According to UML: Loop depends on Init and Animation.
 
 

@@ -1,6 +1,6 @@
 // Init.java
 //
-// Handles initialization of the OpenGL context, window, shaders, cube setup.
+// Handles initialization of the OpenGL context window shaders cube setup.
 // According to UML: Init uses Camera, Shader, Window, Cube.
 
 
